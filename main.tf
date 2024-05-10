@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.48.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+
 resource "aws_lb" "my_lb" {
   name               = "my-load-balancer"
   internal           = false
